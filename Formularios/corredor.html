@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/corredor.css"/>
+    <title>Corredor</title>
+</head>
+<body>
+    <div id="contenedor-pantalla">
+        <main id="contenido-principal">
+            <h2>Corredor</h2>
+            <form name="form_corredor" method="post" action="#">
+                <div class="linea-inputs">
+                    <span>Nombre: <input type="text" id="nombre" /></span>
+                    <span>App: <input type="text" id="app" /></span>
+                    <span>Apm: <input type="text" id="apm" /></span>
+                </div><br>
+
+                <label>Edad:</label>
+                <input type="number" id="edad" /><br><br>
+
+                <label>Género:</label>
+                <input type="radio" name="genero" value="F" /> F
+                <input type="radio" name="genero" value="M" checked /> M
+                <br><br>
+
+                <label>Foto:</label>
+                <input type="file" id="foto" /><br><br>
+
+                <button type="submit" id="btn-guardar">Guardar</button>
+            </form>
+        </main>
+
+        <aside id="menu-lateral">
+            <h3>Menú</h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autos.html">Autos</a></li>
+                    <li><a href="escuderia.html">Escudería</a></li>
+                    <li><a href="corredor.html">Corredor</a></li>
+                    <li><a href="relaciones.html">Relaciones</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer>
+        <span>Fernando Hernández</span>
+        <span>LDSM 405</span>
+    </footer>
+</body>
+</html>
