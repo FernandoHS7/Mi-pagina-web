@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"/>
-    <title>Inicio</title>
+    <title>Inicio - Fórmula 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="contenedor-pantalla">
-        <main id="contenido-principal">
-            <h2>Bienvenido a la Formula 1</h2>
-            <p>Selecciona una opción del menú de la derecha para navegar.</p>
-        </main>
 
-        <aside id="menu-lateral">
-            <h3>Menú</h3>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="autos.html">Autos</a></li>
-                    <li><a href="escuderia.html">Escudería</a></li>
-                    <li><a href="corredor.html">Corredor</a></li>
-                    <li><a href="relaciones.html">Relaciones</a></li>
-                </ul>
-            </nav>
-        </aside>
-    </div>
+    <main>
+        <header>
+            <h1><span class="material-symbols-outlined">sports_score</span> Portal F1</h1>
+            <p>Página principal de administración de Fórmula 1</p>
+        </header>
 
-    <footer>
-        <span>Fernando Hernández</span>
-        <span>LDSM 405</span>
-    </footer>
+        <section>
+            <article>
+                <h2><span class="material-symbols-outlined">contact_support</span> Contacto General</h2>
+                <form action="#">
+                    <p>
+                        <label for="nombre_usuario"><span class="material-symbols-outlined">badge</span> Nombre completo:</label>
+                        <input type="text" id="nombre_usuario" placeholder="Escribe tu nombre completo">
+                    </p>
+
+                    <p>
+                        <label for="correo"><span class="material-symbols-outlined">mail</span> Correo electrónico:</label>
+                        <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                    </p>
+
+                    <p>
+                        <label for="telefono"><span class="material-symbols-outlined">call</span> Teléfono de contacto:</label>
+                        <input type="tel" id="telefono" placeholder="Ej. 4771234567">
+                    </p>
+
+                    <p>
+                        <label for="asunto"><span class="material-symbols-outlined">subject</span> Asunto:</label>
+                        <input type="text" id="asunto" placeholder="Motivo de contacto">
+                    </p>
+
+                    <p>
+                        <label for="mensaje"><span class="material-symbols-outlined">chat</span> Mensaje:</label>
+                        <input type="text" id="mensaje" placeholder="Escribe tu mensaje o solicitud">
+                    </p>
+
+                    <button type="button" onclick="capturarInicio()"><span class="material-symbols-outlined">send</span> Guardar Contacto</button>
+                </form>
+            </article>
+
+            <aside>
+                <h2><span class="material-symbols-outlined">info</span> Información del Sistema</h2>
+                <p><span class="material-symbols-outlined">check_circle</span> Registro centralizado de la temporada.</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Gestión de monoplazas, escuderías y pilotos.</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Control de contratos y asignaciones técnicas.</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Plataforma optimizada para visualización completa.</p>
+            </aside>
+        </section>
+
+        <footer>
+            <p>Fernando Hernández - LDSM 405</p>
+        </footer>
+    </main>
+
+    <nav>
+        <h2>Fórmula 1</h2>
+        <a href="index.html"><span class="material-symbols-outlined">home</span> Inicio</a>
+        <a href="autos.html"><span class="material-symbols-outlined">directions_car</span> Autos</a>
+        <a href="escuderia.html"><span class="material-symbols-outlined">groups</span> Escuderías</a>
+        <a href="corredor.html"><span class="material-symbols-outlined">person</span> Corredores</a>
+        <a href="relaciones.html"><span class="material-symbols-outlined">link</span> Contratos</a>
+    </nav>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
