@@ -15,6 +15,28 @@ body {
     color: #0b2228;
 }
 
+.volver-inicio {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #ffffff;
+    background-color: #0b2228;
+    border: 2px solid #0b2228;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.volver-inicio:hover {
+    color: #0b2228;
+    background-color: #ffffff;
+}
+
 h1 {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;

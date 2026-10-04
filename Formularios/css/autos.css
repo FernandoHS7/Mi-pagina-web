@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #15151e;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #171717;
     display: flex;
     min-height: 100vh;
     width: 100vw;
@@ -24,8 +24,8 @@ main {
 
 nav {
     width: 220px;
-    background-color: #1f1f27;
-    border-left: 1px solid #383845;
+    background-color: #171717;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
@@ -37,17 +37,27 @@ nav {
 }
 
 nav h2 {
-    color: #e10600;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+nav h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 12px;
+    background-color: #e10600;
 }
 
 nav a {
-    background-color: #2a2a35;
+    background-color: #171717;
     color: #ffffff;
     padding: 12px;
     text-decoration: none;
-    border: 1px solid #383845;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -57,6 +67,8 @@ nav a {
 nav a:hover {
     background-color: #e10600;
 }
+
+nav a span { color: #e10600; }
 
 header {
     text-align: center;
@@ -68,6 +80,19 @@ header h1 {
     font-size: 2rem;
 }
 
+header p {
+    color: rgba(23, 23, 23, 0.68);
+}
+
+header::after {
+    content: "";
+    display: block;
+    width: 54px;
+    height: 4px;
+    margin: 14px auto 0;
+    background-color: #e10600;
+}
+
 section {
     display: flex;
     gap: 25px;
@@ -75,22 +100,24 @@ section {
 }
 
 article {
-    background-color: #1f1f27;
-    border: 1px solid #383845;
+    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 6px;
     padding: 25px;
     flex: 2;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 aside {
-    background-color: #1f1f27;
-    border: 1px solid #383845;
+    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 6px;
     padding: 25px;
     flex: 1;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -100,24 +127,40 @@ aside p {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #2a2a35;
+    background-color: #252525;
+    color: #ffffff;
     padding: 15px;
     border-radius: 4px;
-    border: 1px solid #383845;
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 aside span {
     color: #e10600;
 }
 
-h2 {
+article h2,
+aside h2 {
     color: #ffffff;
-    border-bottom: 2px solid #e10600;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    background-color: #252525;
+    border-bottom: 0;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    padding: 12px 16px;
+    margin: -25px -25px 20px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+article h2::after,
+aside h2::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e10600;
 }
 
 p {
@@ -128,7 +171,7 @@ label {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #a1a1a1;
+    color: #ffffff;
     margin-bottom: 6px;
     font-size: 0.95rem;
 }
@@ -136,10 +179,15 @@ label {
 input {
     width: 100%;
     padding: 12px;
-    background-color: #2a2a35;
-    border: 1px solid #383845;
+    background-color: #252525;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
     border-radius: 4px;
+}
+
+input:focus-visible {
+    outline: 2px solid #e10600;
+    outline-offset: 1px;
 }
 
 button {
@@ -160,13 +208,13 @@ button {
 }
 
 button:hover {
-    background-color: #b30500;
+    background-color: #171717;
 }
 
 footer {
     text-align: center;
     margin-top: 25px;
     padding-top: 15px;
-    border-top: 1px solid #383845;
-    color: #a1a1a1;
+    border-top: 1px solid rgba(23, 23, 23, 0.16);
+    color: rgba(23, 23, 23, 0.68);
 }
